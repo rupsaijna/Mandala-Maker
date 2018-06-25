@@ -7,14 +7,15 @@
 </head>
 
 <body>
-  
+<h3>HTML - CSS - Javascript Mandala Maker</h3>
+
 <div id="sketch" style="position:relative; margin-left: auto; margin-right: auto;">
   <canvas id="paint" style="position: absolute; z-index:1;"></canvas>
   <canvas id="bg" style="position: absolute; z-index: 0;"></canvas>
 </div>
 
 <div id ="all_setting" style="position:relative;width:35%;float:right;background-color : rgba(20,20,20,0.1);">
-<div class="settings" id="divi"> 
+<div class="settings" id="divi">
 <mark>Step 1:</mark> Parts
   <button id="b8" onclick="divcan('4');" >4</button>
   <button id="b8" onclick="divcan('8');" >8</button>
@@ -46,13 +47,13 @@
 <br>
 
 <div class="settings" id="filler">
-<input type="checkbox" name="fill" onchange="toggleFill()">Fill shapes?  
+<input type="checkbox" name="fill" onchange="toggleFill()">Fill shapes?
 <div id="colourpicker2" style="display:none;"> Fill Colour: <input type="color" id="myColorFill" onchange="getFillColor()"></div>
 </div>
 
 <br><br>
 
-<div class="settings" id="see_divs"> Toggle visibility : 
+<div class="settings" id="see_divs"> Toggle visibility :
 <input type="checkbox" name="guide" onchange="toggleGuides()" checked>Show guidelines<br>
 </div>
 
@@ -63,7 +64,8 @@
 <!--div class="settings" id="save" >
 <button id="save" onclick="save()">Save</button>
 </div-->
-</div>  
+<a href="https://github.com/rupsaijna/Mandala-Maker">Github Source</a>
+</div>
     <script src="js/index.js"></script>
 
 </body>
