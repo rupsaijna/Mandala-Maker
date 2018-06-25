@@ -1,5 +1,5 @@
-var w=1000;
-var h =1000;
+var w=800;
+var h =800;
 var d=16;
 var color="red";
 var show=1;
