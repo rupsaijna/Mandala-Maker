@@ -1,5 +1,5 @@
-var w=500;
-var h =500;
+var w=1000;
+var h =1000;
 var d=16;
 var color="red";
 var show=1;
@@ -42,11 +42,11 @@ function divide_canvas(num_parts){
   ctxbg.beginPath();
   for (i=1;i<=num_parts;i++){
     angle=part_angle*i;
-    ctxbg.moveTo(0,0);    
+    ctxbg.moveTo(0,0);
  ctxbg.lineTo(0+canvas.width*2*Math.cos(toRadians(angle)), 0+canvas.height*2*Math.sin(toRadians(angle)));
     slope.push(canvas.width*2*Math.cos(toRadians(angle))/canvas.height*2*Math.sin(toRadians(angle)));
   }
-  ctxbg.stroke(); 
+  ctxbg.stroke();
 };
 
 //divide_canvas(d);
@@ -61,7 +61,7 @@ function get_reflection(cox,coy,angle){
   angle=toRadians(angle);
   x_ref=Math.cos(angle)*cox-Math.sin(angle)*coy;
   y_ref=Math.sin(angle)*cox+Math.cos(angle)*coy;
-  return [x_ref,y_ref];  
+  return [x_ref,y_ref];
 }
 
 /* Mouse Capturing Work */
@@ -83,11 +83,11 @@ function getEraser(){
 }
 
 function getSize(size){
-	ctx.lineWidth = size; 
+	ctx.lineWidth = size;
 	var children=document.getElementById('brush').children;
 	var bid='b'+size;
 	for (var i = 0; i < children.length; i++) {
-		children[i].style.background="";	
+		children[i].style.background="";
 	}
 	document.getElementById(bid).style.background='#EEFFFF';
 }
@@ -102,13 +102,13 @@ function divcan(parts){
 	ctxbg.clearRect(0, 0, 500,500);
 	ctxbg.restore();
 	//window.alert(w,h);
-	divide_canvas(parts); 
-	d=parts; 
-	//document.getElementById('divi').style.visibility='hidden'; 
+	divide_canvas(parts);
+	d=parts;
+	//document.getElementById('divi').style.visibility='hidden';
 	var id="b"+parts;
 	var children=document.getElementById('divi').children;
 	for (var i = 0; i < children.length; i++) {
-		children[i].style.background="";	
+		children[i].style.background="";
 	}
 	document.getElementById(id).style.background='#EEFFFF';
 	}
@@ -125,10 +125,10 @@ ctx.lineCap = 'round';
 canvas.addEventListener('mousedown', function(e) {
     ctx.beginPath();
     ctx.moveTo(mouse.x, mouse.y);
- 
+
     canvas.addEventListener('mousemove', onPaint, false);
 }, false);
- 
+
 canvas.addEventListener('mouseup', function() {
     canvas.removeEventListener('mousemove', onPaint, false);
     paint_reflection();
@@ -170,21 +170,21 @@ function getTouchPos(canvasDom, touchEvent) {
 }
 
 // added by trshant - end
- 
+
 var onPaint = function() {
     ctx.lineTo(mouse.x, mouse.y);
-    ctx.stroke();   
+    ctx.stroke();
   refl_x.push(mouse.x);
   refl_y.push(mouse.y);
- if (fill==1)	
+ if (fill==1)
 	{//ctx.fillStyle = "blue";
 	ctx.fill();}
 	  ctx.stroke();
-		
+
 };
 
 function paint_reflection(){
-  
+
 
   for(j=1;j<d;j++){
 	ctx.beginPath();
@@ -194,11 +194,11 @@ function paint_reflection(){
 		rr=get_reflection(refl_x[i], refl_y[i], j*360/d);
 	    	ctx.lineTo(rr[0],rr[1]);
 	  }
-	if (fill==1)	
+	if (fill==1)
 	{//ctx.fillStyle = "blue";
 	ctx.fill();}
 	  ctx.stroke();
-	  
+
 	}
 refl_x=[];
 	  refl_y=[];
