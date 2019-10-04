@@ -6,8 +6,8 @@ var show=1;
 var eraser=0;
 var fill=0;
 
-var w= document.getElementById('sketch').style.width;
-var h= document.getElementById('sketch').style.height;
+var w= document.getElementById('sketch').clientHeight;
+var h= document.getElementById('sketch').clientHeight;
 
 var bg=document.getElementById('bg');
 var ctxbg=bg.getContext('2d');
