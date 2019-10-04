@@ -66,8 +66,8 @@ function get_reflection(cox,coy,angle){
 
 /* Mouse Capturing Work */
 canvas.addEventListener('mousemove', function(e) {
-  mouse.x = e.pageX - this.offsetLeft-w/2;
-  mouse.y = e.pageY - this.offsetTop-h/4;//-h/2;
+  mouse.x = e.pageX - this.offsetLeft-w/4;
+  mouse.y = e.pageY - this.offsetTop-h/2;//-h/2;
 }, false);
 
 ctx.strokeStyle = "red";
