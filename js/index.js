@@ -1,17 +1,19 @@
-var w=600;
-var h =600;
+//var w=600;
+//var h =600;
 var d=16;
 var color="red";
 var show=1;
 var eraser=0;
 var fill=0;
 
+var w= document.getElementById('sketch').style.width;
+var h= document.getElementById('sketch').style.height;
 
 var bg=document.getElementById('bg');
 var ctxbg=bg.getContext('2d');
 
-bg.width = 90vh;//w;
-bg.height = 90vh;//h;
+bg.width = w;
+bg.height = h;
 ctxbg.translate(bg.width/2, bg.width/2);
 
 var canvas = document.getElementById('paint');
@@ -21,8 +23,8 @@ var ctx = canvas.getContext('2d');
 
 var sketch = document.getElementById('sketch');
 var sketch_style = getComputedStyle(sketch);
-canvas.width = 90vh;//w;
-canvas.height = 90vh;//h;
+canvas.width = w;
+canvas.height = h;
 ctx.translate(canvas.width/2, canvas.width/2);
 var mouse = {x: 0, y: 0,xp:0,yp:0};
 var touch = {x: 0, y: 0,xp:0,yp:0};
