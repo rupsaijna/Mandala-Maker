@@ -9,8 +9,8 @@ var fill=0;
 
 var bg=document.getElementById('bg');
 var ctxbg=bg.getContext('2d');
-bg.width = w;
-bg.height = h;
+bg.width = bg.width;//w;
+bg.height = bg.height//h;
 ctxbg.translate(bg.width/2, bg.width/2);
 
 var canvas = document.getElementById('paint');
