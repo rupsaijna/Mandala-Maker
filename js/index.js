@@ -113,6 +113,7 @@ function divcan(parts){
 	for (var i = 0; i < children.length; i++) {
 		children[i].style.background="";
 	}
+	console.log('div parts', id)
 	document.getElementById(id).style.background='#EEFFFF';
 	}
 
