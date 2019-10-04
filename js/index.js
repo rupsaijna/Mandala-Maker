@@ -10,8 +10,8 @@ var fill=0;
 var bg=document.getElementById('bg');
 var ctxbg=bg.getContext('2d');
 
-bg.width = w;
-bg.height = h;
+bg.width = 90vh;//w;
+bg.height = 90vh;//h;
 ctxbg.translate(bg.width/2, bg.width/2);
 
 var canvas = document.getElementById('paint');
@@ -21,8 +21,8 @@ var ctx = canvas.getContext('2d');
 
 var sketch = document.getElementById('sketch');
 var sketch_style = getComputedStyle(sketch);
-canvas.width = w;
-canvas.height = h;
+canvas.width = 90vh;//w;
+canvas.height = 90vh;//h;
 ctx.translate(canvas.width/2, canvas.width/2);
 var mouse = {x: 0, y: 0,xp:0,yp:0};
 var touch = {x: 0, y: 0,xp:0,yp:0};
